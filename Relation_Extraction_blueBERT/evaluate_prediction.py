@@ -1,11 +1,22 @@
 import pandas as pd
 import csv
+import argparse
+from sklearn.metrics import f1_score, accuracy_score, recall_score, precision_score, confusion_matrix
+import matplotlib.pyplot as plt
+
+
+parser = argparse.ArgumentParser(description ='Evaluate prediction on test dataset.')
+
+parser.add_argument('-d', '--data', help ='path to dataset file .tsv')
+parser.add_argument('-r', '--result', help ='path to result file .tsv')
+args = parser.parse_args()
+
 
 header_result = ['PIP', 'TeCP', 'TeRP', 'TrAP', 'TrCP', 'TrIP', 'TrNAP', 'TrWP', 'false']
-header_dataset = ['index', 'sentence', 'label']
+header_dataset = ['index', 'sentence_mask', 'sentence_origin','label']
 
-resultfile_path = "dataset/dataset_prepared/test.tsv"
-datafile_path = "output_dir/test_result/test_results_3.tsv"
+resultfile_path = args.result
+datafile_path = args.data
 
 test_result = pd.read_csv(resultfile_path, delimiter='\t', header=None)
 if test_result.columns[0] is not str:
@@ -20,21 +31,32 @@ if dataset.columns[0] is not str:
     dataset = pd.read_csv(datafile_path, delimiter='\t', header=None, names=header_dataset)
 dataset.loc[0] = [None]*len(dataset.columns)
 
-# print(test_result[0:10])
-# print('-----------'*5)
-# print(dataset[0:10])
 
+y_true = []
+y_pred = []
 correct = 0
 for i, (result, gt) in enumerate(zip(test_result.values[1:],dataset.values[1:])):
     high_prob = result.argmax()
-    pred = header_result[high_prob]
+    y_pred.append(high_prob)
+    
     label = gt[-1]
-    # print(pred, label)
-    if pred.lower() == label.lower():
-        correct+=1
-    # if i > 10:
-    #     print(correct)
-    #     break
+    index_label = next(i for i,x in enumerate(header_result) if label.lower() == x.lower())
+    y_true.append(index_label)
+    
 
-accuracy = correct/i
-print(accuracy)
+acc = accuracy_score(y_true, y_pred)
+recall = recall_score(y_true, y_pred, average="macro")
+f1 = f1_score(y_true, y_pred, average="macro")
+
+print(f1)
+print(acc)
+print(recall)
+confusion_matrix = confusion_matrix(y_true, y_pred)
+print(confusion_matrix)
+plt.imshow(confusion_matrix)
+plt.colorbar()
+plt.xlabel('Predicted')
+plt.ylabel('True')
+plt.show()
+
+# acc:  0.9523809523809523
