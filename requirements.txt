@@ -1,0 +1,5 @@
+pathy==0.10.1
+bioc==2.0.post5
+fire==0.5.0
+pandas==1.5.2
+tqdm==4.64.1

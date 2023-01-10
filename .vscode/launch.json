@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+        "name": "bluebert_train",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/Relation_Extraction_blueBERT/run_bluebert.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--do_train=true",
+                "--do_eval=false",
+                "--do_predict=true",
+                "--task_name=i2b2_2010",
+                "--vocab_file=Relation_Extraction_blueBERT/bluebert_dir/NCBI_BERT/vocab.txt",
+                "--bert_config_file=Relation_Extraction_blueBERT/bluebert_dir/NCBI_BERT/bert_config.json",
+                "--init_checkpoint=Relation_Extraction_blueBERT/bluebert_dir/NCBI_BERT/bert_model.ckpt",
+                "--data_dir=Relation_Extraction_blueBERT/dataset/dataset_prepared/",
+                "--output_dir=Relation_Extraction_blueBERT/output_dir/i2b2_1/",
+                "--do_lower_case=true",
+                "--train_batch_size=64",
+                "--num_train_epochs=4.0"
+            ]
+        },
+    ]
+}
