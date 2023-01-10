@@ -1,6 +1,8 @@
-# i2b2 Dataset Preparation using BLUE(Biomedical Language Understanding Evaluation) for BioBERT
+# NLP Project: NAMED ENTITY RECOGNITION AND RELATION EXTRACTION FROM CLINICAL TEXTS
 
-## Introduction
+## i2b2 Dataset Preparation using BLUE(Biomedical Language Understanding Evaluation) for BioBERT
+
+### Introduction
 
 BLUE benchmark consists of five different biomedicine text-mining tasks with ten corpora.
 Here, we rely on preexisting datasets because they have been widely used by the BioNLP community as shared tasks.
