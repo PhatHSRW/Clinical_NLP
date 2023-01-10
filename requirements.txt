@@ -1,13 +1,16 @@
-pathy==0.10.1
-bioc==2.0.post5
-fire==0.5.0
-pandas==1.5.2
-tqdm==4.64.1
-tensorflow-gpu
-# torch
-numpy
+pathy
+bioc
+pandas
+tqdm
+tensorflow-gpu==1.15.0
+torch==1.12.1
+numpy==1.19.5
 fire
 sympy
 tensorboard
 scikit-learn
 matplotlib
+google-api-python-client
+oauth2client
+spacy==3.3.2
+transformers==4.20.1
