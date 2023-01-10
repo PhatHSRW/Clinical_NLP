@@ -1,0 +1,1 @@
+Because of the copyright, the raw dataset i2b2 will not uploaded here. Try to download it from the original website.
