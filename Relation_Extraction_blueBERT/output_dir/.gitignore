@@ -1,0 +1,2 @@
+*.ckpt*
+!test_result/test_results_3.tsv
