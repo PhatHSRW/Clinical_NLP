@@ -4,8 +4,8 @@ import csv
 header_result = ['PIP', 'TeCP', 'TeRP', 'TrAP', 'TrCP', 'TrIP', 'TrNAP', 'TrWP', 'false']
 header_dataset = ['index', 'sentence', 'label']
 
-resultfile_path = "/home/phat/nlp/bluebert/zzzzzz/test_results_3.tsv"
-datafile_path = "/home/phat/nlp/bluebert/zzzzzz/test_dataset.tsv"
+resultfile_path = "dataset/dataset_prepared/test.tsv"
+datafile_path = "output_dir/test_result/test_results_3.tsv"
 
 test_result = pd.read_csv(resultfile_path, delimiter='\t', header=None)
 if test_result.columns[0] is not str:
