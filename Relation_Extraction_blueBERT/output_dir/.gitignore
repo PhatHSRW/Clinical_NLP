@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-*
-!test_result/*
-=======
 *.ckpt*
 !test_result/test_results_3.tsv
->>>>>>> 96c7e933b5e48a164cdce9474505c2ae3c89e934
