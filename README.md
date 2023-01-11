@@ -6,7 +6,6 @@ The dataset used in this project is i2b2-2010. However we have to process the ra
 Link dataset: https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/
 Source: https://academic.oup.com/jamia/article/18/5/552/830538
 
-
 ## NER using Spacy
 
 - Process i2b2 dataset to be compatible with Spacy \
