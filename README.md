@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 # NLP Project: NAMED ENTITY RECOGNITION (NER) AND RELATION EXTRACTION FROM CLINICAL TEXTS
 
 ## NER using Spacy
 
 
+=======
+# NLP Project: NAMED ENTITY RECOGNITION AND RELATION EXTRACTION FROM CLINICAL TEXTS
+>>>>>>> 96c7e933b5e48a164cdce9474505c2ae3c89e934
 
 ## i2b2 Dataset Preparation using BLUE(Biomedical Language Understanding Evaluation) for BioBERT
 
