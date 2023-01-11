@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 # NLP Project: NAMED ENTITY RECOGNITION (NER) AND RELATION EXTRACTION FROM CLINICAL TEXTS
 
 ## Dataset Introduction
 The dataset used in this project is i2b2-2010. However we have to process the raw data in both tasks.
 
-<<<<<<< HEAD
-=======
-# NLP Project: NAMED ENTITY RECOGNITION AND RELATION EXTRACTION FROM CLINICAL TEXTS
->>>>>>> 96c7e933b5e48a164cdce9474505c2ae3c89e934
-=======
 Link dataset: https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/
 Source: https://academic.oup.com/jamia/article/18/5/552/830538
->>>>>>> phat
+
 
 ## NER using Spacy
 
